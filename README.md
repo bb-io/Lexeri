@@ -31,7 +31,8 @@ Lexeri is a cloud-based terminology management system. Lexeri wants to bring ter
 ### Terminology management
 
 - **Create term request** Create a term request that can suggest terms to be added to the termbase.
-- **Extract terms from document** Create a new term extraction from a document
+- **Extract terms from document** Create a new term extraction from a document. The term extraction will be accessible in the task board.
+- **Import terms** Import from a tbx, csv or xlsx file. The import will be accessible in the task board for further editing.
 
 ## Events
 
