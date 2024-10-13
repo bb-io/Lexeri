@@ -36,6 +36,9 @@ public class WebhookList
     public Task<WebhookResponse<WebhookPayload>> OnTermExtractionFinished(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
+    // [Webhook("Check finished", typeof(CheckFinishedWebhookHandler), Description = "Triggered when a term check of a document is finished. Returns statistics about terms that have been found.")]
+    // public Task<WebhookResponse<CheckFinishedWebhookPayload>> OnCheckFinished(WebhookRequest webhookRequest)
+    //     => HandleCallback<CheckFinishedWebhookPayload>(webhookRequest);
 
     #endregion
 
