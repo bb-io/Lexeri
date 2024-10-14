@@ -11,28 +11,28 @@ public class WebhookList
 {
     #region Webhooks
 
-    [Webhook("Term created", typeof(TermCreatedWebhookHandler), Description = "Triggered when a term was created")]
+    [Webhook("On term created", typeof(TermCreatedWebhookHandler), Description = "Triggered when a term was created")]
     public Task<WebhookResponse<WebhookPayload>> OnTermCreated(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
-    [Webhook("Term request created", typeof(TermRequestCreatedWebhookHandler), Description = "Triggered when a term request was created")]
+    [Webhook("On Term request created", typeof(TermRequestCreatedWebhookHandler), Description = "Triggered when a term request was created")]
     public Task<WebhookResponse<WebhookPayload>> OnTermRequestCreated(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
-    [Webhook("Term request finished", typeof(TermRequestFinishedWebhookHandler), Description = "Triggered when processing of a term request was finished by the terminology managers and its draft terms were published")]
+    [Webhook("On term request finished", typeof(TermRequestFinishedWebhookHandler), Description = "Triggered when processing of a term request was finished by the terminology managers and its draft terms were published")]
     public Task<WebhookResponse<WebhookPayload>> OnTermRequestFinished(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
 
-    [Webhook("Import finished", typeof(ImportFinishedWebhookHandler), Description = "Triggered when processing of an import was finished by the terminology managers and its draft terms were published")]
+    [Webhook("On import finished", typeof(ImportFinishedWebhookHandler), Description = "Triggered when processing of an import was finished by the terminology managers and its draft terms were published")]
     public Task<WebhookResponse<WebhookPayload>> OnImportFinished(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
-    [Webhook("Task finished", typeof(TaskFinishedWebhookHandler), Description = "Triggered when processing of a task was finished by the terminology managers and its draft terms were published")]
+    [Webhook("On task finished", typeof(TaskFinishedWebhookHandler), Description = "Triggered when processing of a task was finished by the terminology managers and its draft terms were published")]
     public Task<WebhookResponse<WebhookPayload>> OnTaskFinished(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 
-    [Webhook("Term extraction finished", typeof(TermExtractionFinishedWebhookHandler), Description = "Triggered when processing of a term extraction was finished by the terminology managers and its draft terms were published")]
+    [Webhook("On term extraction finished", typeof(TermExtractionFinishedWebhookHandler), Description = "Triggered when processing of a term extraction was finished by the terminology managers and its draft terms were published")]
     public Task<WebhookResponse<WebhookPayload>> OnTermExtractionFinished(WebhookRequest webhookRequest)
         => HandleCallback<WebhookPayload>(webhookRequest);
 

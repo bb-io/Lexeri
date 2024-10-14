@@ -38,14 +38,14 @@ Lexeri is a cloud-based terminology management system. Lexeri wants to bring ter
 
 ### Terminology management
 
-- **Term request created** - Triggered when a term request was created 
-- **Term request finished** - Triggered when processing of a term request was finished and its drafts were published to the termbase
-- **Import finished** - Triggered when processing of a import was finished and its drafts were published to the termbase
-- **Term extraction finished** - Triggered when processing of a term extractions was finished and its term candidates were published to the termbase
-- **Task finished** - Triggered when processing of a terminology task was finished and its drafts were published to the termbase
+- **On term request created** - Triggered when a term request was created 
+- **On term request finished** - Triggered when processing of a term request was finished and its drafts were published to the termbase
+- **On import finished** - Triggered when processing of a import was finished and its drafts were published to the termbase
+- **On term extraction finished** - Triggered when processing of a term extractions was finished and its term candidates were published to the termbase
+- **On task finished** - Triggered when processing of a terminology task was finished and its drafts were published to the termbase
 
 ### Terms
-- **Term created** - Triggered when a term was created or updated
+- **On term created** - Triggered when a term was created or updated
 
 ## Feedback
 
