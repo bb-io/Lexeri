@@ -4,6 +4,9 @@ namespace Apps.Lexeri.Models.Dto;
 
 public class ReferenceDocument
 {
+    [Display("ID", Description = "ID of the reference document")]
+    public required string Identifier { get; set; }
+
     [Display("Title", Description = "Title of the reference document")]
     public required string Title { get; set; }
 

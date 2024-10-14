@@ -10,7 +10,7 @@ public class WebhookPayload
     [Display("User name", Description = "Name of the user that triggered the webhook")]
     public string? User_name { get; set; }
 
-    [Display("Identifier", Description = "Identifier of the resource that triggered the webhook")]
+    [Display("ID", Description = "ID of the resource that triggered the webhook")]
     public string? Identifier { get; set; }
 
     [Display("Title", Description = "Title of the resource that triggered the webhook")]

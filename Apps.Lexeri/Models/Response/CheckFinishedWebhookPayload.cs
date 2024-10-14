@@ -7,7 +7,7 @@ public class CheckFinishedWebhookPayload
     [Display("Action", Description = "The action that triggered the webhook")]
     public required string Action { get; set; }
 
-    [Display("Identifier", Description = "Identifier of the check")]
+    [Display("ID", Description = "ID of the check")]
     public string Identifier { get; set; }
 
     [Display("Locale code", Description = "Locale code of the check")]

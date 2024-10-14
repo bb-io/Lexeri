@@ -4,7 +4,7 @@ namespace Apps.Lexeri.Models.Dto;
 
 public class Import
 {
-    [Display("Identifier", Description = "Identifier of the term request")]
+    [Display("ID", Description = "ID of the term request")]
     public required string Identifier { get; set; }
 
     [Display("File", Description = "Filename of the imported file")]

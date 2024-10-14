@@ -3,7 +3,7 @@ namespace Apps.Lexeri.Models.Response;
 
 public class UploadedDocument
 {
-    [Display("Identifier", Description = "Identifier of the uploaded document")]
+    [Display("ID", Description = "ID of the uploaded document")]
     public required string Identifier { get; set; }
 
     [Display("Token", Description = "Token of the upload document")]

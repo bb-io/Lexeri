@@ -4,7 +4,7 @@ namespace Apps.Lexeri.Models.Response;
 
 public class Webhook
 {
-    [Display("Identifier", Description = "The identifier of the webhook")]
+    [Display("ID", Description = "The ID of the webhook")]
     public required string Identifier { get; set;}
 
     [Display("Actions", Description = "The actions of the webhooks")]

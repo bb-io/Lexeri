@@ -3,7 +3,7 @@ namespace Apps.Lexeri.Models.Dto;
 
 public class Termbase
 {
-    [Display("Identifier", Description = "Identifier of the termbase")]
+    [Display("ID", Description = "ID of the termbase")]
     public required string Identifier { get; set; }
 
     [Display("Name", Description = "Name of the termbase")]

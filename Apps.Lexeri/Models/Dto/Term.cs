@@ -4,7 +4,7 @@ namespace Apps.Lexeri.Models.Dto;
 
 public class Term
 {
-    [Display("Identifier", Description = "Identifier of the term")]
+    [Display("ID", Description = "ID of the term")]
     public required string Identifier { get; set; }
 
     [Display("Value", Description = "Value of the term")]

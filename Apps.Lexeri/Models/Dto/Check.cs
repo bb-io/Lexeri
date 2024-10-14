@@ -4,7 +4,7 @@ namespace Apps.Lexeri.Models.Dto;
 
 public class Check
 {
-    [Display("Identifier", Description = "Identifier of the term request")]
+    [Display("ID", Description = "ID of the term request")]
     public required string Identifier { get; set; }
 
     [Display("Document", Description = "Document to be checked")]
