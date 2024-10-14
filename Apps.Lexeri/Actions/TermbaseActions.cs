@@ -24,7 +24,7 @@ public class TermbaseActions(InvocationContext invocationContext, IFileManagemen
         var request = new LexeriRequest(
             "/termbases/info",
             Method.Get,
-            Creds.ToArray()
+            Creds
         );
 
         var response = await Client.ExecuteWithJson<Models.Dto.Termbase>(request);
@@ -38,7 +38,7 @@ public class TermbaseActions(InvocationContext invocationContext, IFileManagemen
         var request = new LexeriRequest(
             "/exports/download",
             Method.Post,
-            Creds.ToArray()
+            Creds
         );
 
         var response = await Client.ExecuteAsync<string>(request);

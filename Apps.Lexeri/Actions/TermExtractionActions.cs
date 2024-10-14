@@ -38,7 +38,7 @@ public class TermExtractionActions(InvocationContext invocationContext, IFileMan
       var request = new LexeriRequest(
           "/term_extractions",
           Method.Post,
-          Creds.ToArray()
+          Creds
       );
 
       request.AddJsonBody(new {

@@ -16,7 +16,7 @@ public class AppInvocable : BaseInvocable
     protected LexeriClient Client { get; }
 
     protected IEnumerable<AuthenticationCredentialsProvider> Creds =>
-        InvocationContext.AuthenticationCredentialsProviders;
+        InvocationContext.AuthenticationCredentialsProviders.ToArray();
 
     #endregion
 

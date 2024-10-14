@@ -20,7 +20,7 @@ public class TermCheckActions(InvocationContext invocationContext, IFileManageme
         var request = new LexeriRequest(
             "/term_checks/live",
             Method.Post,
-            Creds.ToArray()
+            Creds
         );
 
         request.AddJsonBody(new {
@@ -54,7 +54,7 @@ public class TermCheckActions(InvocationContext invocationContext, IFileManageme
     //     var request = new LexeriRequest(
     //         "/checks",
     //         Method.Post,
-    //         Creds.ToArray()
+    //         Cred
     //     );
 
     //     request.AddJsonBody(new {

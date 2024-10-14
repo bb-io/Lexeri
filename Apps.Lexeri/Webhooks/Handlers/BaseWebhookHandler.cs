@@ -25,7 +25,7 @@ public abstract class BaseWebhookHandler : AppInvocable, IWebhookEventHandler
     var request = new LexeriRequest(
       "/webhooks",
       Method.Post,
-      Creds.ToArray()
+      Creds
     );
 
     request.AddJsonBody(new {
@@ -44,7 +44,7 @@ public abstract class BaseWebhookHandler : AppInvocable, IWebhookEventHandler
     var request = new LexeriRequest(
       "/webhooks",
       Method.Get,
-      Creds.ToArray()
+      Creds
     );
 
     var webhooks = await Client.ExecuteWithJson<List<Webhook>>(request);
@@ -56,7 +56,7 @@ public abstract class BaseWebhookHandler : AppInvocable, IWebhookEventHandler
       var deleteRequest = new LexeriRequest(
         $"/webhooks/{identifier}",
         Method.Delete,
-        Creds.ToArray()
+        Creds
       );
 
       await Client.ExecuteWithHandling(deleteRequest);

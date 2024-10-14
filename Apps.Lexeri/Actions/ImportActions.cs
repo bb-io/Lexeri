@@ -28,7 +28,7 @@ public class ImportActions(InvocationContext invocationContext, IFileManagementC
       var request = new LexeriRequest(
           "/imports",
           Method.Post,
-          Creds.ToArray()
+          Creds
       );
 
       request.AddJsonBody(new {

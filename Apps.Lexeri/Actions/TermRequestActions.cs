@@ -21,7 +21,7 @@ public class TermRequestActions(InvocationContext invocationContext, IFileManage
       var request = new LexeriRequest(
           "/term_requests",
           Method.Post,
-          Creds.ToArray()
+          Creds
       );
 
       request.AddJsonBody(new {

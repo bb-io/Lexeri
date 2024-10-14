@@ -18,7 +18,7 @@ public class TermActions(InvocationContext invocationContext)
         var request = new LexeriRequest(
             "/terms",
             Method.Get,
-            Creds.ToArray()
+            Creds
         );
 
         request.AddQueryParameter("search", input.Search);
