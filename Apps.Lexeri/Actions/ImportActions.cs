@@ -18,10 +18,10 @@ public class ImportActions(InvocationContext invocationContext, IFileManagementC
     [Action("Import a document", Description = "Create a new import from a TBX, CSV or XLSX document")]
     public async Task<Import> CheckText([ActionParameter] CreateImportRequest input)
     {
-      var fileBytes = fileManagementClient.DownloadAsync(input.Document).Result.GetByteData().Result;
+      var fileStream = await fileManagementClient.DownloadAsync(input.Document);
 
       var uploadRequest = new LexeriUploadRequest();
-      uploadRequest.AddFile("file", fileBytes, input.Document.Name);
+      uploadRequest.AddFile("file", () => fileStream, input.Document.Name);
 
       var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 

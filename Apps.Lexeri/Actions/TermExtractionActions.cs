@@ -25,10 +25,10 @@ public class TermExtractionActions(InvocationContext invocationContext, IFileMan
           continue;
         }
 
-        var fileBytes = fileManagementClient.DownloadAsync(file).Result.GetByteData().Result;
+        var fileStream = await fileManagementClient.DownloadAsync(file);
 
         var uploadRequest = new LexeriUploadRequest();
-        uploadRequest.AddFile("file", fileBytes, file.Name);
+        uploadRequest.AddFile("file", () => fileStream, file.Name);
 
         var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 
