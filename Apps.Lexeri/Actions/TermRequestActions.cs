@@ -54,7 +54,7 @@ public class TermRequestActions(InvocationContext invocationContext, IFileManage
             document_token = uploadResponse.Token
           });
           
-          await Client.ExecuteWithJson<ReferenceDocument>(addReferenceDocumentRequest);
+          await Client.ExecuteWithHandling(addReferenceDocumentRequest);
         }
       }
 
@@ -72,7 +72,7 @@ public class TermRequestActions(InvocationContext invocationContext, IFileManage
             state = "preferred"
           });
           
-          await Client.ExecuteWithJson<Term>(addTermSuggestionRequest);
+          await Client.ExecuteWithHandling(addTermSuggestionRequest);
         }
       }
 
