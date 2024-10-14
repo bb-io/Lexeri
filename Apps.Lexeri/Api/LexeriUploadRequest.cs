@@ -9,6 +9,6 @@ public class LexeriUploadRequest : RestRequest
 {
   public LexeriUploadRequest() : base(Urls.UploadUrl, Method.Post)
   {
-    this.AddHeader("Content-Type", "multipart/form-data");
+    this.AlwaysMultipartFormData = true;
   }
 }
