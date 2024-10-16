@@ -36,7 +36,7 @@ public class TermCheckActions(InvocationContext invocationContext, IFileManageme
             TermMatches = response.Select(static x => new TermMatch
             {
                 Matching_term = x.Matching_term,
-                Preferred_term = x.Preferred_term is Array ? null : x.Preferred_term
+                Preferred_term = x.Preferred_term
             }).ToList()
         };
     }
