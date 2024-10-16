@@ -1,5 +1,8 @@
+using Apps.Lexeri.DataSourceHandlers;
+
 using Blackbird.Applications.Sdk.Common;
 using Blackbird.Applications.Sdk.Common.Files;
+using Blackbird.Applications.Sdk.Common.Dictionaries;
 
 namespace Apps.Lexeri.Models.Request;
 
@@ -18,5 +21,6 @@ public class CreateTermRequestRequest
     public List<string>? TermSuggestions { get; set; }
 
     [Display("Locale code", Description = "Locale code of the suggested terms for the term request")]
+    [StaticDataSource(typeof(LocaleCodeDataHandler))]
     public string? LocaleCode { get; set; }
 }

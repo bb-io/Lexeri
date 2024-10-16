@@ -1,0 +1,66 @@
+using Blackbird.Applications.Sdk.Common.Dictionaries;
+
+namespace Apps.Lexeri.DataSourceHandlers;
+
+public class NLPLocaleCodeDataHandler : IStaticDataSourceHandler
+{
+    public Dictionary<string, string> GetData()
+     => new()
+    {
+      { "fr-FR", "French (France)" },
+      { "zh-hans", "Chinese (Simplified)" },
+      { "zh-hant", "Chinese (Traditional)" },
+      { "zh", "Chinese" },
+      { "hr-HR", "Croatian (Croatia)" },
+      { "en-UK", "English (United Kingdom)" },
+      { "pl-PL", "Polish (Poland)" },
+      { "es-LA", "Spanish (Latin America)" },
+      { "hr", "Croatian" },
+      { "en", "English" },
+      { "en-CA", "English (Canada)" },
+      { "en-GB", "English (GB)" },
+      { "en-US", "English (USA)" },
+      { "fi", "Finnish" },
+      { "fr", "French" },
+      { "fr-CA", "French (Canada)" },
+      { "de", "German" },
+      { "de-DE", "German (Germany)" },
+      { "de-AT", "German (Austria)" },
+      { "de-CH", "German (Switzerland)" },
+      { "it", "Italian" },
+      { "it-IT", "Italian (Italy)" },
+      { "ja", "Japanese" },
+      { "ko", "Korean" },
+      { "mk", "Macedonian" },
+      { "pl", "Polish" },
+      { "pt", "Portuguese" },
+      { "pt-br", "Portuguese (Brazilian)" },
+      { "pt-pt", "Portuguese (Portugual)" },
+      { "ro", "Romanian" },
+      { "sl", "Slovenian" },
+      { "es", "Spanish" },
+      { "es-AR", "Spanish (Argentina)" },
+      { "es-BO", "Spanish (Bolivia)" },
+      { "es-CL", "Spanish (Chile)" },
+      { "es-CO", "Spanish (Colombia)" },
+      { "es-CR", "Spanish (Costa Rica)" },
+      { "es-DO", "Spanish (Dominican Republic)" },
+      { "es-EC", "Spanish (Ecuador)" },
+      { "es-SV", "Spanish (El Salvador)" },
+      { "es-GT", "Spanish (Guatemala)" },
+      { "es-HN", "Spanish (Honduras)" },
+      { "es-MX", "Spanish (Mexico)" },
+      { "es-NI", "Spanish (Nicaragua)" },
+      { "es-PA", "Spanish (Panama)" },
+      { "es-PY", "Spanish (Paraguay)" },
+      { "es-PE", "Spanish (Peru)" },
+      { "es-PR", "Spanish (Puerto Rico)" },
+      { "es-ES", "Spanish (Spain)" },
+      { "es-UY", "Spanish (Uruguay)" },
+      { "es-VE", "Spanish (Venezuela)" },
+      { "sv", "Swedish" },
+      { "sv-se", "Swedish (Sweden)" },
+      { "zh-SG", "Chinese (Singapore)" },
+      { "en-AU", "English (Australia)"}
+    };
+}
