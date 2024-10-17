@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LexeriApp": {
+      "commandName": "Project"
+    },
+    "Profil \"1\"": {
+      "commandName": "Executable"
+    }
+  }
+}
