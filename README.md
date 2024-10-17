@@ -4,6 +4,8 @@ Blackbird is the new automation backbone for the language technology industry. B
 
 ## Introduction
 
+<!-- begin docs -->
+
 Lexeri is a cloud-based terminology management system. Lexeri wants to bring terminology into all departments of your company and tries to achieve this with by focussing on usability and integration. Lexeri offers collaborative terminology workflows and checks for documents and texts in differnt systems. Learn more at [www.lexeri.com](https://www.lexeri.com).
 
 ## Connecting
@@ -50,3 +52,5 @@ Lexeri is a cloud-based terminology management system. Lexeri wants to bring ter
 ## Feedback
 
 Do you want to use this app or do you have feedback on our implementation? Reach out to us using the [established channels](https://www.blackbird.io/) or create an issue.
+
+<!-- end docs -->
