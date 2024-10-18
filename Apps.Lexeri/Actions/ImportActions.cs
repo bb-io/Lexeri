@@ -19,9 +19,10 @@ public class ImportActions(InvocationContext invocationContext, IFileManagementC
     public async Task<Import> CheckText([ActionParameter] CreateImportRequest input)
     {
       var fileStream = await fileManagementClient.DownloadAsync(input.Document);
+      var bytes = await fileStream.GetByteData();
 
       var uploadRequest = new LexeriUploadRequest();
-      uploadRequest.AddFile("file", () => fileStream, input.Document.Name);
+      uploadRequest.AddFile("file", bytes, input.Document.Name);
 
       var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 

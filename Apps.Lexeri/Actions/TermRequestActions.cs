@@ -38,9 +38,10 @@ public class TermRequestActions(InvocationContext invocationContext, IFileManage
           }
 
           var fileStream = await fileManagementClient.DownloadAsync(file);
+          var bytes = await fileStream.GetByteData();
 
           var uploadRequest = new LexeriUploadRequest();
-          uploadRequest.AddFile("file", () => fileStream, file.Name);
+          uploadRequest.AddFile("file", bytes, file.Name);
 
           var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 
