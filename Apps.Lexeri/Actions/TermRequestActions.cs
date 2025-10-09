@@ -12,7 +12,7 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Term request")]
 public class TermRequestActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
 
     [Action("Create term request", Description = "Create a term request that can contain term suggestions to be added to the termbase.")]

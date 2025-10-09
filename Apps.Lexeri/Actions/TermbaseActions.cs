@@ -14,7 +14,7 @@ using System.Xml;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Termbase")]
 public class TermbaseActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient)
     : AppInvocable(invocationContext)
 {    

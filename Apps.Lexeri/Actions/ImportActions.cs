@@ -12,7 +12,7 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Import")]
 public class ImportActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
 
     [Action("Import a document", Description = "Create a new import from a TBX, CSV or XLSX document")]
