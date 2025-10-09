@@ -5,14 +5,14 @@
         <Nullable>enable</Nullable>
         <Product>Lexeri</Product>
         <Description>Lexeri is a collaborative terminology management solution that makes terminonology accessible to everyone.</Description>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <PackageId>Apps.Lexeri.Tests.com</PackageId>
         <AssemblyName>Apps.Lexeri.Tests.com</AssemblyName>
         <RootNamespace>Apps.Lexeri.Tests.com</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Blackbird.Applications.Sdk.Common" Version="2.8.0" />
+      <PackageReference Include="Blackbird.Applications.SDK.Blueprints" Version="1.0.0-rc.10308" />
       <PackageReference Include="Blackbird.Applications.Sdk.Glossaries.Utils" Version="1.0.1" />
       <PackageReference Include="Blackbird.Applications.Sdk.Utils" Version="1.0.25" />
       <PackageReference Include="MimeTypes" Version="2.5.2">
