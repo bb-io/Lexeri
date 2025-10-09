@@ -12,7 +12,7 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Term check")]
 public class TermCheckActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
     [Action("Check text", Description = "Check text for matching terms")]
     public async Task<TermCheckResult> CheckText([ActionParameter] LiveTermCheckRequest input)
@@ -47,7 +47,8 @@ public class TermCheckActions(InvocationContext invocationContext, IFileManageme
     //     var fileBytes = fileManagementClient.DownloadAsync(input.Document).Result.GetByteData().Result;
 
     //     var uploadRequest = new LexeriUploadRequest();
-    //     uploadRequest.AddFile("file", fileBytes, input.Document.Name);
+    //     var bytes = await fileStream.GetByteData();
+    //     uploadRequest.AddFile("file", bytes, input.Document.Name);
 
     //     var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 

@@ -12,7 +12,7 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Term extraction")]
 public class TermExtractionActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
 
     [Action("Extract terms from document", Description = "Create a new term extraction that extracts term candidates from given documents.")]
@@ -26,9 +26,10 @@ public class TermExtractionActions(InvocationContext invocationContext, IFileMan
         }
 
         var fileStream = await fileManagementClient.DownloadAsync(file);
+        var bytes = await fileStream.GetByteData();
 
         var uploadRequest = new LexeriUploadRequest();
-        uploadRequest.AddFile("file", () => fileStream, file.Name);
+        uploadRequest.AddFile("file", bytes, file.Name);
 
         var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 

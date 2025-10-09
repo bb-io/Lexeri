@@ -12,16 +12,17 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Import")]
 public class ImportActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
 
     [Action("Import a document", Description = "Create a new import from a TBX, CSV or XLSX document")]
     public async Task<Import> CheckText([ActionParameter] CreateImportRequest input)
     {
       var fileStream = await fileManagementClient.DownloadAsync(input.Document);
+      var bytes = await fileStream.GetByteData();
 
       var uploadRequest = new LexeriUploadRequest();
-      uploadRequest.AddFile("file", () => fileStream, input.Document.Name);
+      uploadRequest.AddFile("file", bytes, input.Document.Name);
 
       var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 

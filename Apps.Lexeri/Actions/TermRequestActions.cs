@@ -12,7 +12,7 @@ using Blackbird.Applications.Sdk.Utils.Extensions.Files;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Term request")]
 public class TermRequestActions(InvocationContext invocationContext, IFileManagementClient fileManagementClient): AppInvocable(invocationContext) {    
 
     [Action("Create term request", Description = "Create a term request that can contain term suggestions to be added to the termbase.")]
@@ -38,9 +38,10 @@ public class TermRequestActions(InvocationContext invocationContext, IFileManage
           }
 
           var fileStream = await fileManagementClient.DownloadAsync(file);
+          var bytes = await fileStream.GetByteData();
 
           var uploadRequest = new LexeriUploadRequest();
-          uploadRequest.AddFile("file", () => fileStream, file.Name);
+          uploadRequest.AddFile("file", bytes, file.Name);
 
           var uploadResponse = await Client.ExecuteWithJson<UploadedDocument>(uploadRequest);
 
