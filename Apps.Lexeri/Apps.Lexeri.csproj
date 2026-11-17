@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <Product>Lexeri</Product>
         <Description>Lexeri is a collaborative terminology management solution that makes terminonology accessible to everyone.</Description>
-        <Version>1.0.2</Version>
+        <Version>1.0.3</Version>
         <PackageId>Apps.Lexeri.Tests.com</PackageId>
         <AssemblyName>Apps.Lexeri.Tests.com</AssemblyName>
         <RootNamespace>Apps.Lexeri.Tests.com</RootNamespace>
@@ -26,5 +26,9 @@
       <EmbeddedResource Include="image\icon.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="..\README.md" Link="README.md" CopyToOutputDirectory="Always" />
     </ItemGroup>
 </Project>
