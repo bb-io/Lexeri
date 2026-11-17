@@ -8,7 +8,7 @@ using Blackbird.Applications.Sdk.Common.Invocation;
 
 namespace Apps.Lexeri.Actions;
 
-[ActionList]
+[ActionList("Term")]
 public class TermActions(InvocationContext invocationContext)
     : AppInvocable(invocationContext)
 {    
